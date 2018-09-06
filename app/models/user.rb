@@ -6,16 +6,16 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   enum role: [:user, :vip, :admin]
 
-  has_many :posts 
+  has_many :posts
 
-  after_initialize :default 
+  after_initialize :default
 
-  private 
+  private
 
-  def default 
-    self.role ||= :user 
-  end 
+  def default
+    self.role ||= :user
+  end
   
 
-  
+
 end
